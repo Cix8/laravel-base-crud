@@ -28,6 +28,9 @@
                 <strong>Sale date:</strong>
                 <span>{{ $selected_comic->sale_date }}</span>
             </div>
+            <div class="update-btn">
+                <a href="{{ route('comics.edit', ['comic' => $selected_comic->id]) }}">Edit</a>
+            </div>
         </li>
     </ul>
 @endsection

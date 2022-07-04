@@ -16,3 +16,7 @@ main li {
   padding: 2rem;
 }
 
+main li .update-btn {
+  padding: 2rem 0;
+}
+
