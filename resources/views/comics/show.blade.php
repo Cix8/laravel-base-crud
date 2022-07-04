@@ -31,12 +31,22 @@
             <div class="update-btn">
                 <a href="{{ route('comics.edit', ['comic' => $selected_comic->id]) }}">Edit</a>
             </div>
-            <form action="{{ route('comics.destroy', ['comic' => $selected_comic->id]) }}" method="POST">
-                @csrf
-                @method('DELETE')
+            <div class="del-btn">
+                <button id="delete-btn">Delete</button>
+            </div>
+            <ul>
+                <li>
+                    <form action="{{ route('comics.destroy', ['comic' => $selected_comic->id]) }}" method="POST">
+                        @csrf
+                        @method('DELETE')
 
-                <button type="submit">Delete</button>
-            </form>
+                        <button type="submit" id="yes-btn">YES</button>
+                    </form>
+                </li>
+                <li>
+                    <button id="no-btn">NO</button>
+                </li>
+            </ul>
         </li>
     </ul>
 @endsection
