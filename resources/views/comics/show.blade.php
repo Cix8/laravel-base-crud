@@ -31,6 +31,12 @@
             <div class="update-btn">
                 <a href="{{ route('comics.edit', ['comic' => $selected_comic->id]) }}">Edit</a>
             </div>
+            <form action="{{ route('comics.destroy', ['comic' => $selected_comic->id]) }}" method="POST">
+                @csrf
+                @method('DELETE')
+
+                <button type="submit">Delete</button>
+            </form>
         </li>
     </ul>
 @endsection
