@@ -5,6 +5,16 @@
         @csrf
         @method('PUT')
 
+        @if ($errors->any())
+            <div>
+                <ul>
+                    @foreach ($errors->all() as $error)
+                        <li class="error">{{ $error }}</li>
+                    @endforeach
+                </ul>
+            </div>
+        @endif
+
         <div>
             <label for="title">Title</label>
             <input type="text" id="title" name="title"

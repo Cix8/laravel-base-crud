@@ -20,3 +20,8 @@ main li .update-btn {
   padding: 2rem 0;
 }
 
+.error {
+  font-weight: bold;
+  color: red;
+}
+
