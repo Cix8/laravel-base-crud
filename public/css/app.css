@@ -40,6 +40,7 @@ button {
   min-width: 100%;
   min-height: 100%;
   background-color: rgba(0, 0, 0, 0.5);
+  color: white;
 }
 
 .app-container main li #select-list ul {
@@ -48,8 +49,8 @@ button {
 
 .app-container main li #select-list ul button {
   padding: 0.5rem 1rem;
-  color: white;
   font-size: 1.2rem;
+  color: inherit;
 }
 
 .app-container main li #select-list ul #yes-btn {
