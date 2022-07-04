@@ -4,6 +4,17 @@ const confirmBtn = document.getElementById('yes-btn');
 console.log(confirmBtn);
 const deniedBtn = document.getElementById('no-btn');
 console.log(deniedBtn);
-// deleteBtn.addEventListener('click', function() {
-    
-// })
+const selectList = document.getElementById('select-list');
+console.log(selectList);
+
+if (deleteBtn !== null) {
+    deleteBtn.addEventListener('click', function() {
+        selectList.classList.remove('d-none');
+
+        deniedBtn.addEventListener('click', hideSelectList);
+    })
+}
+
+function hideSelectList() {
+    selectList.classList.add('d-none');
+}

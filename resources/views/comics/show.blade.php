@@ -34,19 +34,24 @@
             <div class="del-btn">
                 <button id="delete-btn">Delete</button>
             </div>
-            <ul>
-                <li>
-                    <form action="{{ route('comics.destroy', ['comic' => $selected_comic->id]) }}" method="POST">
-                        @csrf
-                        @method('DELETE')
-
-                        <button type="submit" id="yes-btn">YES</button>
-                    </form>
-                </li>
-                <li>
-                    <button id="no-btn">NO</button>
-                </li>
-            </ul>
+            <div class="d-none" id="select-list">
+                <div class="list-title">
+                    <h2>The selected item will be DELETED. Do you really want to continue?</h2>
+                </div>
+                <ul>
+                    <li>
+                        <form action="{{ route('comics.destroy', ['comic' => $selected_comic->id]) }}" method="POST">
+                            @csrf
+                            @method('DELETE')
+    
+                            <button type="submit" id="yes-btn">YES</button>
+                        </form>
+                    </li>
+                    <li>
+                        <button id="no-btn">NO</button>
+                    </li>
+                </ul>
+            </div>
         </li>
     </ul>
 @endsection

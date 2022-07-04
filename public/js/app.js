@@ -19428,8 +19428,20 @@ console.log(deleteBtn);
 var confirmBtn = document.getElementById('yes-btn');
 console.log(confirmBtn);
 var deniedBtn = document.getElementById('no-btn');
-console.log(deniedBtn); // deleteBtn.addEventListener('click', function() {
-// })
+console.log(deniedBtn);
+var selectList = document.getElementById('select-list');
+console.log(selectList);
+
+if (deleteBtn !== null) {
+  deleteBtn.addEventListener('click', function () {
+    selectList.classList.remove('d-none');
+    deniedBtn.addEventListener('click', hideSelectList);
+  });
+}
+
+function hideSelectList() {
+  selectList.classList.add('d-none');
+}
 
 /***/ }),
 
